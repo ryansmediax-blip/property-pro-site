@@ -63,7 +63,6 @@ const packages = [
     description: "Premium prep for high-end and estate properties",
     features: [
       "Everything in Full Prep",
-      "Roof soft wash",
       "Driveway restoration",
       "Outdoor furniture cleaning",
       "White-glove finish",

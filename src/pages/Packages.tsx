@@ -34,7 +34,6 @@ const packageCategories = [
         features: [
           "Everything in Essential Care",
           "Monthly pressure washing rotation",
-          "Bi-annual roof washing",
           "Photo/video property reports",
           "Snow removal (seasonal)",
         ],
@@ -94,7 +93,6 @@ const packageCategories = [
         period: "",
         features: [
           "Everything in Full Prep",
-          "Roof soft wash",
           "Driveway restoration",
           "Landscape edging",
           "White-glove finish",
@@ -140,7 +138,6 @@ const packageCategories = [
         period: "",
         features: [
           "Everything in Deep Clean",
-          "Roof washing",
           "Concrete sealing",
           "Exterior wood treatment",
         ],

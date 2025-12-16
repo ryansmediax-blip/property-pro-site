@@ -5,7 +5,6 @@ const footerLinks = {
   services: [
     { name: "Window Cleaning", href: "/services#windows" },
     { name: "Pressure Washing", href: "/services#pressure-washing" },
-    { name: "Roof Washing", href: "/services#roof" },
     { name: "Gutter Cleaning", href: "/services#gutters" },
     { name: "Snow Removal", href: "/services#snow" },
   ],

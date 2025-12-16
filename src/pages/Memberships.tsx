@@ -49,7 +49,6 @@ const plans = [
     features: [
       "Everything in Essential Care",
       "Monthly pressure washing rotation",
-      "Bi-annual roof soft wash",
       "Photo & video property reports",
       "Seasonal snow removal included",
       "Deck/patio deep cleaning",

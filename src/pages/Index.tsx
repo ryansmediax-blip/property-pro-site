@@ -31,7 +31,6 @@ const features = [
 const services = [
   "Window Cleaning",
   "Pressure Washing",
-  "Roof Washing",
   "Gutter Cleaning",
   "Snow Removal",
   "Property Check-ins",

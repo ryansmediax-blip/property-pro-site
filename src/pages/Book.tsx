@@ -11,7 +11,6 @@ import { useToast } from "@/hooks/use-toast";
 const services = [
   { id: "windows", name: "Window Cleaning", price: "From $75" },
   { id: "pressure", name: "Pressure Washing", price: "From $150" },
-  { id: "roof", name: "Roof Washing", price: "From $200" },
   { id: "gutters", name: "Gutter Cleaning", price: "From $100" },
   { id: "snow", name: "Snow Removal", price: "From $75" },
   { id: "checkins", name: "Property Check-ins", price: "From $50" },
