@@ -61,7 +61,6 @@ const plans = [
     description: "Full-service care for discerning property owners",
     features: [
       "Everything in Premium Care",
-      "Interior window cleaning",
       "Weekly property check-ins",
       "Dedicated account manager",
       "Emergency response priority",

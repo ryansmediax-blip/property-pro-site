@@ -15,7 +15,7 @@ const faqCategories = [
     faqs: [
       {
         question: "What services do you offer?",
-        answer: "We offer comprehensive exterior property care including window cleaning (exterior and interior), pressure washing (siding, decks, patios, driveways), gutter cleaning, seasonal snow removal, and property check-in services with photo/video documentation.",
+        answer: "We offer comprehensive exterior property care including window cleaning, pressure washing (siding, decks, patios, driveways), gutter cleaning, seasonal snow removal, and property check-in services with photo/video documentation.",
       },
       {
         question: "How do I schedule a service?",
