@@ -9,8 +9,8 @@ const services = [
     id: "windows",
     icon: Sparkles,
     title: "Window Cleaning",
-    description: "Crystal-clear windows that maximize your mountain views. We offer both exterior and interior (partial) cleaning services.",
-    features: ["Exterior window cleaning", "Interior cleaning available", "Screen cleaning", "Track & sill detailing"],
+    description: "Crystal-clear windows that maximize your mountain views. Professional exterior window cleaning services.",
+    features: ["Exterior window cleaning", "Screen cleaning", "Track & sill detailing", "Hard water stain removal"],
     starting: "$75",
   },
   {

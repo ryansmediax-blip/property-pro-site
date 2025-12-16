@@ -45,7 +45,6 @@ const packageCategories = [
         period: "/month",
         features: [
           "Everything in Premium Care",
-          "Interior window cleaning",
           "Weekly property check-ins",
           "Dedicated account manager",
           "Emergency response priority",
@@ -125,7 +124,7 @@ const packageCategories = [
         starting: "$499",
         period: "",
         features: [
-          "All windows (interior optional)",
+          "All exterior windows",
           "Full pressure washing",
           "Gutter cleaning",
           "Deck restoration",
