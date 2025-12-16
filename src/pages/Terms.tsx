@@ -20,7 +20,7 @@ export default function Terms() {
             <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Services</h2>
             <p>
               Payette Property Prep provides exterior property maintenance services including but not limited to 
-              window cleaning, pressure washing, roof washing, gutter cleaning, snow removal, and property check-in 
+              window cleaning, pressure washing, gutter cleaning, snow removal, and property check-in 
               services in Valley County, Idaho.
             </p>
 

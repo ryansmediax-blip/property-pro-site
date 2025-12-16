@@ -22,14 +22,6 @@ const services = [
     starting: "$150",
   },
   {
-    id: "roof",
-    icon: Home,
-    title: "Roof Washing",
-    description: "Gentle yet effective roof cleaning that removes moss, algae, and debris without damaging your roofing materials.",
-    features: ["Moss & algae removal", "Debris clearing", "Soft wash technique", "Gutter face cleaning"],
-    starting: "$200",
-  },
-  {
     id: "gutters",
     icon: Wind,
     title: "Gutter Cleaning",
