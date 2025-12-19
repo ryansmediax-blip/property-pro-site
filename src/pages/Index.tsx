@@ -106,30 +106,55 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="section-padding">
-        <div className="container-wide mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+      {/* Features Section - Apple Style */}
+      <section className="relative py-32 md:py-40 bg-[#1d1d1f] overflow-hidden">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
+        
+        <div className="relative container-wide mx-auto px-6 lg:px-8">
+          {/* Section header */}
+          <div className="text-center max-w-4xl mx-auto mb-20 md:mb-28">
+            <p className="text-[#86868b] text-lg md:text-xl font-medium mb-4 tracking-wide">
               Why Property Owners Trust Us
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              We understand the unique challenges of maintaining properties in Idaho's mountain climate.
             </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight">
+              Built for the mountain lifestyle.{" "}
+              <span className="bg-gradient-to-r from-[#2997ff] to-[#5ac8fa] bg-clip-text text-transparent">
+                Designed for excellence.
+              </span>
+            </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Feature grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
             {features.map((feature, index) => (
-              <Card key={feature.title} className="hover-lift group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                    <feature.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </CardContent>
-              </Card>
+              <div 
+                key={feature.title} 
+                className="group relative p-8 md:p-6 rounded-3xl bg-[#2d2d2f]/50 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-all duration-500 hover:bg-[#2d2d2f]/80"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2997ff]/20 to-[#5ac8fa]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <feature.icon className="h-7 w-7 text-[#2997ff]" />
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-white mb-3 tracking-tight">
+                  {feature.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-[#86868b] text-base leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             ))}
+          </div>
+
+          {/* Bottom accent */}
+          <div className="mt-20 md:mt-28 text-center">
+            <p className="text-[#86868b] text-lg">
+              Trusted by <span className="text-white font-medium">100+ property owners</span> across Valley County
+            </p>
           </div>
         </div>
       </section>
