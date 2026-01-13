@@ -1,73 +1,27 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Check, Camera, Clock, Handshake, Star } from "lucide-react";
-
-const benefits = [
-  {
-    icon: Camera,
-    title: "Photo-Ready Properties",
-    description: "Listings with clean exteriors photograph better and attract more buyer interest online.",
-  },
-  {
-    icon: Clock,
-    title: "Fast Turnaround",
-    description: "Need it done before the photographer arrives? We offer 24-48 hour rush service for active listings.",
-  },
-  {
-    icon: Handshake,
-    title: "Reliable Partnership",
-    description: "Build your reputation with consistently presentable listings. We make you look good.",
-  },
-  {
-    icon: Star,
-    title: "Preferred Pricing",
-    description: "Volume discounts and priority scheduling for agents who regularly work with us.",
-  },
-];
+import { ArrowRight, Check, Camera, Clock, Handshake, Star, Building2 } from "lucide-react";
 
 const packages = [
   {
     name: "Quick Refresh",
     price: "$199",
-    turnaround: "48-hour turnaround",
-    description: "Fast touch-up for properties that need light exterior cleaning",
-    features: [
-      "Exterior window cleaning",
-      "Front entrance detailing",
-      "Walkway pressure wash",
-      "Doormat area cleanup",
-    ],
-    ideal: "Ideal for well-maintained properties",
+    turnaround: "48hr",
+    features: ["Exterior windows", "Front entrance", "Walkway pressure wash"],
   },
   {
     name: "Full Listing Prep",
     price: "$399",
-    turnaround: "2-3 day turnaround",
-    description: "Complete exterior preparation for maximum listing impact",
+    turnaround: "2-3 days",
     popular: true,
-    features: [
-      "All exterior windows",
-      "Full pressure washing",
-      "Gutter cleaning & face wash",
-      "Deck/patio detailing",
-      "Photo-ready guarantee",
-    ],
-    ideal: "Perfect for most listings",
+    features: ["All exterior windows", "Full pressure washing", "Gutter cleaning", "Deck/patio", "Photo-ready guarantee"],
   },
   {
     name: "Luxury Listing",
     price: "$699",
-    turnaround: "3-5 day turnaround",
-    description: "Premium prep for high-end and estate properties",
-    features: [
-      "Everything in Full Prep",
-      "Driveway restoration",
-      "Outdoor furniture cleaning",
-      "White-glove finish",
-    ],
-    ideal: "For $1M+ properties",
+    turnaround: "3-5 days",
+    features: ["Everything in Full Prep", "Driveway restoration", "Outdoor furniture", "White-glove finish"],
   },
 ];
 
@@ -75,22 +29,33 @@ export default function Agents() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
-        <div className="container-wide mx-auto">
+      <section className="relative py-24 md:py-32 bg-[#1d1d1f] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+        
+        <div className="relative container-wide mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm font-medium text-primary mb-4">For Real Estate Professionals</p>
-            <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-              Partner With Us for Listing Success
+            <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-sm font-medium px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
+              <Building2 className="h-4 w-4" />
+              <span>For Real Estate Professionals</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight mb-6">
+              Listings that{" "}
+              <span className="bg-gradient-to-r from-[#2997ff] to-[#5ac8fa] bg-clip-text text-transparent">
+                photograph beautifully.
+              </span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
-              Clean exteriors sell homes faster. We help Valley County agents present listings at their absolute best — 
-              ready for photography, showings, and the market.
+            
+            <p className="text-xl text-[#86868b] max-w-xl mx-auto mb-8">
+              Fast, reliable exterior prep that makes your properties shine — 
+              and makes you look even better.
             </p>
+
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild variant="hero" size="lg">
+              <Button asChild size="xl" className="bg-white text-[#1d1d1f] hover:bg-white/90">
                 <Link to="/contact">Become a Partner</Link>
               </Button>
-              <Button asChild variant="hero-outline" size="lg">
+              <Button asChild size="xl" variant="outline" className="border-white/20 text-white hover:bg-white/10">
                 <Link to="/book">Book Listing Prep</Link>
               </Button>
             </div>
@@ -98,177 +63,116 @@ export default function Agents() {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="section-padding">
-        <div className="container-wide mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-4">Why Agents Choose Us</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We understand the real estate business. That means reliability, speed, and results you can count on.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit) => (
-              <Card key={benefit.title} className="hover-lift text-center">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground text-sm">{benefit.description}</p>
-                </CardContent>
-              </Card>
+      {/* Benefits Strip */}
+      <section className="py-12 bg-[#1d1d1f] border-t border-white/5">
+        <div className="container-wide mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {[
+              { icon: Camera, title: "Photo-Ready", desc: "Every time" },
+              { icon: Clock, title: "Fast Turnaround", desc: "24-48hr rush available" },
+              { icon: Handshake, title: "Reliable", desc: "Never miss a deadline" },
+              { icon: Star, title: "15% Partner Discount", desc: "Volume pricing" },
+            ].map((item) => (
+              <div key={item.title}>
+                <item.icon className="h-6 w-6 text-[#2997ff] mx-auto mb-3" />
+                <h3 className="text-white font-semibold">{item.title}</h3>
+                <p className="text-[#86868b] text-sm">{item.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Listing Prep Packages */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-wide mx-auto">
+      {/* Packages */}
+      <section className="py-20 bg-background">
+        <div className="container-wide mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-4">Listing Prep Packages</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Fast, reliable exterior prep designed specifically for real estate listings.
-            </p>
+            <h2 className="text-3xl font-semibold mb-3">Listing Prep Packages</h2>
+            <p className="text-muted-foreground">Choose your level, we handle the rest.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {packages.map((pkg) => (
-              <Card 
-                key={pkg.name} 
-                className={`hover-lift relative ${pkg.popular ? 'border-2 border-primary' : ''}`}
+              <div 
+                key={pkg.name}
+                className={`p-6 rounded-2xl transition-all ${
+                  pkg.popular 
+                    ? 'bg-primary text-primary-foreground scale-105 shadow-xl' 
+                    : 'bg-card border border-border hover:border-primary/50'
+                }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-medium px-4 py-1 rounded-full">
-                    Most Popular
-                  </div>
+                  <p className="text-xs font-medium text-accent mb-3">Most Popular</p>
                 )}
-                <CardContent className="p-6">
-                  <div className="text-sm text-muted-foreground mb-2">{pkg.turnaround}</div>
-                  <h3 className="text-xl font-semibold mb-1">{pkg.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{pkg.description}</p>
-                  
-                  <div className="mb-6">
-                    <span className="text-sm text-muted-foreground">Starting at</span>
-                    <div className="text-3xl font-semibold text-primary">{pkg.price}</div>
-                  </div>
+                
+                <h3 className={`text-xl font-semibold mb-1 ${pkg.popular ? '' : 'text-foreground'}`}>
+                  {pkg.name}
+                </h3>
+                
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className={`text-3xl font-semibold ${pkg.popular ? '' : 'text-primary'}`}>
+                    {pkg.price}
+                  </span>
+                  <span className={`text-sm ${pkg.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
+                    · {pkg.turnaround}
+                  </span>
+                </div>
 
-                  <ul className="space-y-3 mb-6">
-                    {pkg.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-3 text-sm">
-                        <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <ul className="space-y-2 mb-6">
+                  {pkg.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 text-sm">
+                      <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${pkg.popular ? 'text-accent' : 'text-primary'}`} />
+                      <span className={pkg.popular ? 'text-primary-foreground' : ''}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
 
-                  <p className="text-xs text-muted-foreground mb-4 italic">{pkg.ideal}</p>
-
-                  <Button 
-                    asChild 
-                    variant={pkg.popular ? "cta" : "outline"} 
-                    className="w-full"
-                  >
-                    <Link to="/book">
-                      Book Now
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                <Button 
+                  asChild 
+                  className={`w-full ${pkg.popular ? 'bg-white text-primary hover:bg-white/90' : ''}`}
+                  variant={pkg.popular ? "default" : "outline"}
+                >
+                  <Link to="/book">Book Now</Link>
+                </Button>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Partnership Program */}
-      <section className="section-padding">
-        <div className="container-narrow mx-auto">
-          <Card className="bg-primary text-primary-foreground overflow-hidden">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-3xl font-semibold mb-4">Agent Partnership Program</h2>
-                  <p className="text-primary-foreground/80 mb-6">
-                    Become a preferred partner and enjoy exclusive benefits designed for busy real estate professionals.
-                  </p>
-                  <ul className="space-y-3 mb-6">
-                    {[
-                      "Priority scheduling for all listings",
-                      "Volume pricing discounts",
-                      "Dedicated account support",
-                      "Co-branded marketing materials",
-                      "Referral incentives",
-                    ].map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-sm">
-                        <Check className="h-5 w-5 text-accent" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild variant="cta" size="lg">
-                    <Link to="/contact">
-                      Apply to Partner
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-accent mb-2">15%</div>
-                  <p className="text-primary-foreground/80">Partner discount on all services</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+      {/* Partnership CTA */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container-narrow mx-auto px-6 lg:px-8">
+          <div className="bg-card rounded-3xl p-8 md:p-12 border border-border text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Agent Partnership Program</h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              Volume discounts, priority scheduling, dedicated support, 
+              and co-branded marketing materials.
+            </p>
+            <Button asChild variant="cta" size="lg">
+              <Link to="/contact">
+                Apply to Partner
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Testimonial */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-narrow mx-auto text-center">
-          <Card className="hover-lift">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-6 h-6 text-accent fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-xl md:text-2xl font-medium text-foreground mb-6">
-                "Payette Property Prep has become an essential part of my listing process. 
-                My properties photograph beautifully and clients always comment on how clean everything looks. 
-                They're reliable, professional, and easy to work with."
-              </blockquote>
-              <div>
-                <p className="font-semibold text-foreground">Sarah Mitchell</p>
-                <p className="text-muted-foreground">Top Producing Agent, McCall Real Estate</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding">
-        <div className="container-narrow mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-4">Ready to Elevate Your Listings?</h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
-            Join Valley County's leading agents who trust us to make their listings shine.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild variant="hero" size="xl">
-              <Link to="/contact">
-                Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="hero-outline" size="xl">
-              <Link to="/book">Book Listing Prep</Link>
-            </Button>
+      <section className="py-16 bg-background">
+        <div className="container-narrow mx-auto px-6 lg:px-8 text-center">
+          <div className="flex justify-center gap-1 mb-6">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 text-accent fill-current" />
+            ))}
           </div>
+          <blockquote className="text-xl md:text-2xl font-medium text-foreground mb-6 max-w-2xl mx-auto">
+            "Payette Property Prep has become essential to my listing process. 
+            Properties photograph beautifully and clients always comment on how clean everything looks."
+          </blockquote>
+          <p className="font-semibold">Sarah Mitchell</p>
+          <p className="text-sm text-muted-foreground">Top Producing Agent, McCall Real Estate</p>
         </div>
       </section>
     </Layout>

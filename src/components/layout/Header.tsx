@@ -5,12 +5,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Services", href: "/services" },
-  { name: "Packages", href: "/packages" },
   { name: "Memberships", href: "/memberships" },
+  { name: "Services", href: "/services" },
   { name: "For Agents", href: "/agents" },
   { name: "About", href: "/about" },
-  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
 

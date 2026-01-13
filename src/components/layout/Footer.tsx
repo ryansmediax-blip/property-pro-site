@@ -2,16 +2,13 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
-  services: [
-    { name: "Window Cleaning", href: "/services#windows" },
-    { name: "Pressure Washing", href: "/services#pressure-washing" },
-    { name: "Gutter Cleaning", href: "/services#gutters" },
-    { name: "Snow Removal", href: "/services#snow" },
+  main: [
+    { name: "Memberships", href: "/memberships" },
+    { name: "Services", href: "/services" },
+    { name: "For Agents", href: "/agents" },
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "FAQ", href: "/faq" },
-    { name: "For Real Estate Agents", href: "/agents" },
     { name: "Contact", href: "/contact" },
   ],
   legal: [
@@ -47,11 +44,11 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Main */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {footerLinks.main.map((link) => (
                 <li key={link.name}>
                   <Link to={link.href} className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                     {link.name}
