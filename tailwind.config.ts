@@ -13,43 +13,33 @@ export default {
   		}
   	},
   	extend: {
-  		fontFamily: {
-  			display: [
-  				'Outfit',
-  				'system-ui',
-  				'sans-serif'
-  			],
-  			sans: [
-  				'Work Sans',
-  				'ui-sans-serif',
-  				'system-ui',
-  				'sans-serif',
-  				'Apple Color Emoji',
-  				'Segoe UI Emoji',
-  				'Segoe UI Symbol',
-  				'Noto Color Emoji'
-  			],
-  			serif: [
-  				'Lora',
-  				'ui-serif',
-  				'Georgia',
-  				'Cambria',
-  				'Times New Roman',
-  				'Times',
-  				'serif'
-  			],
-  			mono: [
-  				'Inconsolata',
-  				'ui-monospace',
-  				'SFMono-Regular',
-  				'Menlo',
-  				'Monaco',
-  				'Consolas',
-  				'Liberation Mono',
-  				'Courier New',
-  				'monospace'
-  			]
-  		},
+		fontFamily: {
+			display: [
+				'Inter',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'system-ui',
+				'sans-serif'
+			],
+			sans: [
+				'Inter',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'system-ui',
+				'sans-serif'
+			],
+			serif: [
+				'Lora',
+				'ui-serif',
+				'Georgia',
+				'serif'
+			],
+			mono: [
+				'Inconsolata',
+				'ui-monospace',
+				'monospace'
+			]
+		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
