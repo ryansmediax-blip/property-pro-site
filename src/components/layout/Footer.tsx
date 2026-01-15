@@ -5,7 +5,6 @@ const footerLinks = {
   main: [
     { name: "Memberships", href: "/memberships" },
     { name: "Services", href: "/services" },
-    { name: "For Agents", href: "/agents" },
   ],
   company: [
     { name: "About Us", href: "/about" },
