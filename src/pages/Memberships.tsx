@@ -56,48 +56,59 @@ const homeownerPlans = [
 
 const agentPackages = [
   {
-    name: "Quick Refresh",
-    price: "$199",
-    description: "48hr turnaround",
+    name: "Starter",
+    price: "$299",
+    priceNote: "/month",
+    description: "6 listing preps per year",
     icon: Zap,
     features: [
-      "Exterior windows",
-      "Front entrance cleaning",
-      "Walkway pressure wash",
+      "6 Full Listing Prep credits annually",
+      "Use credits anytime within 12 months",
+      "48hr priority scheduling",
       "Photo-ready guarantee",
+      "$50/listing (vs $75 one-time)",
     ],
-    cta: "Book Quick Refresh",
+    cta: "Start Starter Plan",
+    annualValue: "$450 value",
   },
   {
-    name: "Full Listing Prep",
-    price: "$399",
-    description: "2-3 day turnaround",
+    name: "Professional",
+    price: "$499",
+    priceNote: "/month",
+    description: "12 listing preps per year",
     icon: Star,
     popular: true,
     features: [
-      "All exterior windows",
-      "Full pressure washing",
-      "Gutter cleaning",
-      "Deck & patio prep",
+      "12 Full Listing Prep credits annually",
+      "Use credits anytime within 12 months",
+      "24hr rush scheduling included",
       "Photo-ready guarantee",
+      "$42/listing (vs $75 one-time)",
+      "Rollover unused credits (up to 3)",
     ],
-    cta: "Book Full Prep",
+    cta: "Start Professional Plan",
+    annualValue: "$900 value",
   },
   {
-    name: "Luxury Listing",
-    price: "$699",
-    description: "3-5 day turnaround",
+    name: "Top Producer",
+    price: "$799",
+    priceNote: "/month",
+    description: "24 listing preps per year",
     icon: Crown,
     highlighted: true,
     features: [
-      "Everything in Full Prep",
-      "Driveway restoration",
-      "Outdoor furniture cleaning",
-      "White-glove finish",
-      "Rush option available",
+      "24 Full Listing Prep credits annually",
+      "Use credits anytime within 12 months",
+      "Same-day rush available",
+      "Photo-ready guarantee",
+      "$33/listing (vs $75 one-time)",
+      "Rollover unused credits (up to 6)",
+      "Dedicated account manager",
+      "Co-branded marketing materials",
     ],
-    cta: "Book Luxury Prep",
-    savings: "Best for high-end listings",
+    cta: "Start Top Producer Plan",
+    savings: "Best value for high-volume agents",
+    annualValue: "$1,800 value",
   },
 ];
 
@@ -112,11 +123,13 @@ const homeownerComparison = [
 ];
 
 const agentComparison = [
-  { name: "Exterior windows", quick: "Front only", full: "All", luxury: "All + detail" },
-  { name: "Pressure washing", quick: "Walkway", full: "Full exterior", luxury: "Full + driveway" },
-  { name: "Turnaround time", quick: "48hr", full: "2-3 days", luxury: "3-5 days" },
-  { name: "Rush option", quick: "—", full: "+$50", luxury: "Included" },
-  { name: "Photo guarantee", quick: "✓", full: "✓", luxury: "✓" },
+  { name: "Listing prep credits", starter: "6/year", professional: "12/year", topProducer: "24/year" },
+  { name: "Cost per listing", starter: "$50", professional: "$42", topProducer: "$33" },
+  { name: "Rush scheduling", starter: "48hr priority", professional: "24hr included", topProducer: "Same-day" },
+  { name: "Credit rollover", starter: "—", professional: "Up to 3", topProducer: "Up to 6" },
+  { name: "Account manager", starter: "—", professional: "—", topProducer: "Dedicated" },
+  { name: "Photo guarantee", starter: "✓", professional: "✓", topProducer: "✓" },
+  { name: "Annual commitment", starter: "12 months", professional: "12 months", topProducer: "12 months" },
 ];
 
 export default function Memberships() {
@@ -302,7 +315,7 @@ export default function Memberships() {
                       {plan.price}
                     </span>
                     <span className={plan.highlighted ? 'text-primary-foreground/70' : 'text-muted-foreground'}>
-                      {customerType === "homeowner" ? "/month" : ""}
+                      {customerType === "homeowner" ? "/month" : ('priceNote' in plan ? (plan as { priceNote?: string }).priceNote : "")}
                     </span>
                   </div>
                   {plan.savings && (
@@ -369,10 +382,10 @@ export default function Memberships() {
                     </>
                   ) : (
                     <>
-                      <th className="text-center py-4 px-4 font-semibold">Quick</th>
-                      <th className="text-center py-4 px-4 font-semibold text-primary">Full Prep</th>
+                      <th className="text-center py-4 px-4 font-semibold">Starter</th>
+                      <th className="text-center py-4 px-4 font-semibold text-primary">Professional</th>
                       <th className="text-center py-4 px-4 font-semibold">
-                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">Luxury</span>
+                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">Top Producer</span>
                       </th>
                     </>
                   )}
@@ -390,9 +403,9 @@ export default function Memberships() {
                       </>
                     ) : (
                       <>
-                        <td className="text-center py-4 px-4 text-sm text-muted-foreground">{(feature as typeof agentComparison[0]).quick}</td>
-                        <td className="text-center py-4 px-4 text-sm font-medium">{(feature as typeof agentComparison[0]).full}</td>
-                        <td className="text-center py-4 px-4 text-sm font-medium text-primary">{(feature as typeof agentComparison[0]).luxury}</td>
+                        <td className="text-center py-4 px-4 text-sm text-muted-foreground">{(feature as typeof agentComparison[0]).starter}</td>
+                        <td className="text-center py-4 px-4 text-sm font-medium">{(feature as typeof agentComparison[0]).professional}</td>
+                        <td className="text-center py-4 px-4 text-sm font-medium text-primary">{(feature as typeof agentComparison[0]).topProducer}</td>
                       </>
                     )}
                   </tr>
