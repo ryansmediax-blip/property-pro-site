@@ -96,11 +96,12 @@ export default function Book() {
     paymentPreference: "online",
   });
 
-  // Check URL params for pre-selected package
+  // Check URL params for pre-selected package and skip to step 2
   useEffect(() => {
     const pkg = searchParams.get("package");
     if (pkg === "base" || pkg === "summit") {
       setSelectedPackage(pkg);
+      setStep(2); // Skip directly to property details
     }
   }, [searchParams]);
 
