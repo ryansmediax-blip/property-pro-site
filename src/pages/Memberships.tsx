@@ -41,48 +41,52 @@ const homeownerPlans = [
 
 const agentPackages = [
   {
-    name: "Starter",
+    name: "Base",
     price: "$299",
     priceNote: "/month",
     description: "6 listing preps per year",
     icon: Zap,
     features: [
-      "6 Full Listing Prep credits annually",
+      "Full exterior window cleaning",
+      "6 Listing Prep credits annually",
       "Use credits anytime within 12 months",
       "48hr priority scheduling",
       "Photo-ready guarantee",
       "$50/listing (vs $75 one-time)",
     ],
-    cta: "Start Starter Plan",
+    cta: "Start Base Plan",
     annualValue: "$450 value",
   },
   {
-    name: "Professional",
+    name: "Summit",
     price: "$499",
     priceNote: "/month",
     description: "12 listing preps per year",
     icon: Star,
-    popular: true,
+    highlighted: true,
     features: [
-      "12 Full Listing Prep credits annually",
+      "Full exterior window cleaning",
+      "12 Listing Prep credits annually",
       "Use credits anytime within 12 months",
       "24hr rush scheduling included",
       "Photo-ready guarantee",
       "$42/listing (vs $75 one-time)",
       "Rollover unused credits (up to 3)",
     ],
-    cta: "Start Professional Plan",
+    cta: "Start Summit Plan",
+    savings: "Most popular for solo agents",
     annualValue: "$900 value",
   },
   {
-    name: "Top Producer",
+    name: "Enterprise",
     price: "$799",
     priceNote: "/month",
     description: "24 listing preps per year",
     icon: Crown,
-    highlighted: true,
+    popular: true,
     features: [
-      "24 Full Listing Prep credits annually",
+      "Full exterior window cleaning",
+      "24 Listing Prep credits annually",
       "Use credits anytime within 12 months",
       "Same-day rush available",
       "Photo-ready guarantee",
@@ -90,9 +94,9 @@ const agentPackages = [
       "Rollover unused credits (up to 6)",
       "Dedicated account manager",
       "Co-branded marketing materials",
+      "Ideal for brokerages & teams",
     ],
-    cta: "Start Top Producer Plan",
-    savings: "Best value for high-volume agents",
+    cta: "Start Enterprise Plan",
     annualValue: "$1,800 value",
   },
 ];
@@ -106,13 +110,14 @@ const homeownerComparison = [
 ];
 
 const agentComparison = [
-  { name: "Listing prep credits", starter: "6/year", professional: "12/year", topProducer: "24/year" },
-  { name: "Cost per listing", starter: "$50", professional: "$42", topProducer: "$33" },
-  { name: "Rush scheduling", starter: "48hr priority", professional: "24hr included", topProducer: "Same-day" },
-  { name: "Credit rollover", starter: "—", professional: "Up to 3", topProducer: "Up to 6" },
-  { name: "Account manager", starter: "—", professional: "—", topProducer: "Dedicated" },
-  { name: "Photo guarantee", starter: "✓", professional: "✓", topProducer: "✓" },
-  { name: "Annual commitment", starter: "12 months", professional: "12 months", topProducer: "12 months" },
+  { name: "Full exterior window cleaning", base: "✓", summit: "✓", enterprise: "✓" },
+  { name: "Listing prep credits", base: "6/year", summit: "12/year", enterprise: "24/year" },
+  { name: "Cost per listing", base: "$50", summit: "$42", enterprise: "$33" },
+  { name: "Rush scheduling", base: "48hr priority", summit: "24hr included", enterprise: "Same-day" },
+  { name: "Credit rollover", base: "—", summit: "Up to 3", enterprise: "Up to 6" },
+  { name: "Account manager", base: "—", summit: "—", enterprise: "Dedicated" },
+  { name: "Photo guarantee", base: "✓", summit: "✓", enterprise: "✓" },
+  { name: "Annual commitment", base: "12 months", summit: "12 months", enterprise: "12 months" },
 ];
 
 export default function Memberships() {
@@ -402,11 +407,11 @@ export default function Memberships() {
                     </>
                   ) : (
                     <>
-                      <th className="text-center py-4 px-4 font-semibold">Starter</th>
-                      <th className="text-center py-4 px-4 font-semibold text-primary">Professional</th>
+                      <th className="text-center py-4 px-4 font-semibold">Base</th>
                       <th className="text-center py-4 px-4 font-semibold">
-                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">Top Producer</span>
+                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">Summit</span>
                       </th>
+                      <th className="text-center py-4 px-4 font-semibold text-primary">Enterprise</th>
                     </>
                   )}
                 </tr>
@@ -422,9 +427,9 @@ export default function Memberships() {
                       </>
                     ) : (
                       <>
-                        <td className="text-center py-4 px-4 text-sm text-muted-foreground">{(feature as typeof agentComparison[0]).starter}</td>
-                        <td className="text-center py-4 px-4 text-sm font-medium">{(feature as typeof agentComparison[0]).professional}</td>
-                        <td className="text-center py-4 px-4 text-sm font-medium text-primary">{(feature as typeof agentComparison[0]).topProducer}</td>
+                        <td className="text-center py-4 px-4 text-sm text-muted-foreground">{(feature as typeof agentComparison[0]).base}</td>
+                        <td className="text-center py-4 px-4 text-sm font-medium text-primary">{(feature as typeof agentComparison[0]).summit}</td>
+                        <td className="text-center py-4 px-4 text-sm font-medium">{(feature as typeof agentComparison[0]).enterprise}</td>
                       </>
                     )}
                   </tr>
