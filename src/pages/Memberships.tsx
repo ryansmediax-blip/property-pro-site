@@ -223,11 +223,17 @@ export default function Memberships() {
         <div className="container-wide mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Choose Your Level of Care</h2>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-2">
               {customerType === "homeowner" 
                 ? "Every plan includes our satisfaction guarantee and the flexibility to upgrade anytime."
                 : "Professional exterior prep packages designed for listing success."}
             </p>
+            {customerType === "homeowner" && (
+              <p className="text-sm text-muted-foreground mb-8">
+                Prices shown are for properties under 1,200 sq ft. <Link to="/contact" className="underline hover:text-foreground">Contact us</Link> for larger properties.
+              </p>
+            )}
+            {customerType === "agent" && <div className="mb-8" />}
 
             {/* Customer Type Toggle */}
             <div className="inline-flex items-center bg-secondary rounded-full p-1 mb-12">
