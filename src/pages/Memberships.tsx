@@ -6,51 +6,36 @@ import { ArrowRight, Check, Star, Zap, Crown, Shield, Clock, Percent, Heart, Cam
 
 const homeownerPlans = [
   {
-    name: "Essential",
-    price: "$149",
-    description: "The smart starting point",
+    name: "Base",
+    price: "$180",
+    description: "Essential exterior care",
     icon: Zap,
     features: [
       "Monthly exterior window cleaning",
-      "Quarterly gutter cleaning",
-      "Property walkthrough each visit",
+      "Entry way snow removal",
+      "Photo property reports",
       "Priority scheduling",
-      "Email service reports",
+      "Email service updates",
     ],
-    cta: "Start Essential",
+    cta: "Start Base",
   },
   {
-    name: "Premium",
-    price: "$279",
-    description: "Our most popular choice",
+    name: "Summit",
+    price: "$300",
+    description: "Complete peace of mind",
     icon: Star,
     popular: true,
-    features: [
-      "Everything in Essential",
-      "Monthly pressure washing rotation",
-      "Photo & video property reports",
-      "Seasonal snow removal included",
-      "Deck & patio deep cleaning",
-    ],
-    cta: "Start Premium",
-  },
-  {
-    name: "Estate",
-    price: "$449",
-    description: "The ultimate in property care",
-    icon: Crown,
     highlighted: true,
     features: [
-      "Everything in Premium",
-      "Weekly property check-ins",
-      "Dedicated account manager",
-      "24/7 emergency response",
-      "Concierge coordination",
-      "Annual exterior wood treatment",
-      "Priority winter services",
+      "Everything in Base",
+      "Video property reports with walkthrough",
+      "Extended snow removal coverage",
+      "Seasonal deep window cleaning",
+      "48hr response guarantee",
+      "Monthly property check-ins",
     ],
-    cta: "Start Estate",
-    savings: "Best value for estates",
+    cta: "Start Summit",
+    savings: "Best value – Save $120/year",
   },
 ];
 
@@ -113,13 +98,11 @@ const agentPackages = [
 ];
 
 const homeownerComparison = [
-  { name: "Exterior window cleaning", essential: "Monthly", premium: "Monthly", estate: "Weekly" },
-  { name: "Gutter cleaning", essential: "Quarterly", premium: "Monthly", estate: "Monthly" },
-  { name: "Pressure washing", essential: "—", premium: "Monthly", estate: "Bi-weekly" },
-  { name: "Property reports", essential: "Email", premium: "Photo/Video", estate: "Video + Call" },
-  { name: "Snow removal", essential: "Add-on", premium: "Included", estate: "Priority" },
-  { name: "Account manager", essential: "—", premium: "—", estate: "Dedicated" },
-  { name: "Emergency response", essential: "48hr", premium: "24hr", estate: "Same-day" },
+  { name: "Exterior window cleaning", base: "Monthly", summit: "Monthly + Seasonal Deep Clean" },
+  { name: "Entry way snow removal", base: "Standard", summit: "Extended Coverage" },
+  { name: "Property reports", base: "Photo", summit: "Photo & Video Walkthrough" },
+  { name: "Response time", base: "72hr", summit: "48hr Guarantee" },
+  { name: "Property check-ins", base: "Per visit", summit: "Monthly dedicated" },
 ];
 
 const agentComparison = [
@@ -271,7 +254,7 @@ export default function Memberships() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          <div className={`grid gap-8 max-w-4xl mx-auto items-start ${customerType === "homeowner" ? "lg:grid-cols-2" : "lg:grid-cols-3"}`}>
             {plans.map((plan) => (
               <div 
                 key={plan.name}
@@ -374,10 +357,9 @@ export default function Memberships() {
                   <th className="text-left py-4 pr-8 font-medium text-muted-foreground">Feature</th>
                   {customerType === "homeowner" ? (
                     <>
-                      <th className="text-center py-4 px-4 font-semibold">Essential</th>
-                      <th className="text-center py-4 px-4 font-semibold text-primary">Premium</th>
+                      <th className="text-center py-4 px-4 font-semibold">Base</th>
                       <th className="text-center py-4 px-4 font-semibold">
-                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">Estate</span>
+                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">Summit</span>
                       </th>
                     </>
                   ) : (
@@ -397,9 +379,8 @@ export default function Memberships() {
                     <td className="py-4 pr-8 text-sm">{feature.name}</td>
                     {customerType === "homeowner" ? (
                       <>
-                        <td className="text-center py-4 px-4 text-sm text-muted-foreground">{(feature as typeof homeownerComparison[0]).essential}</td>
-                        <td className="text-center py-4 px-4 text-sm font-medium">{(feature as typeof homeownerComparison[0]).premium}</td>
-                        <td className="text-center py-4 px-4 text-sm font-medium text-primary">{(feature as typeof homeownerComparison[0]).estate}</td>
+                        <td className="text-center py-4 px-4 text-sm text-muted-foreground">{(feature as typeof homeownerComparison[0]).base}</td>
+                        <td className="text-center py-4 px-4 text-sm font-medium text-primary">{(feature as typeof homeownerComparison[0]).summit}</td>
                       </>
                     ) : (
                       <>
@@ -422,32 +403,32 @@ export default function Memberships() {
           <div className="container-wide mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <Crown className="h-12 w-12 text-[#ffd700] mx-auto mb-6" />
+                <Star className="h-12 w-12 text-[#ffd700] mx-auto mb-6" />
                 <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-                  Why Estate Members Love It
+                  Why Summit is Worth It
                 </h2>
                 <p className="text-[#86868b] text-xl max-w-2xl mx-auto">
-                  For properties that deserve the highest standard of care.
+                  Complete peace of mind for just $120 more per year.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
-                    title: "Same-Day Emergency Response",
-                    description: "Pipe burst? Storm damage? We're there within hours, not days. Your property is never left vulnerable.",
+                    title: "Video Property Reports",
+                    description: "See exactly what we see. Monthly video walkthroughs show your property's condition so you're never guessing.",
                   },
                   {
-                    title: "Dedicated Account Manager",
-                    description: "One person who knows your property inside and out. Direct line, personal attention, proactive care.",
+                    title: "48hr Response Guarantee",
+                    description: "When you call, we answer. Fast turnaround for any issues that arise—weather or otherwise.",
                   },
                   {
-                    title: "Weekly Property Intelligence",
-                    description: "Video walkthroughs and detailed reports so you know your property's condition, even from 1,000 miles away.",
+                    title: "Extended Snow Coverage",
+                    description: "Entry way and walkways cleared quickly after snowfall. Keep access safe all winter long.",
                   },
                   {
-                    title: "Concierge Coordination",
-                    description: "We coordinate with contractors, deliveries, and other services. Your property manager, on demand.",
+                    title: "Seasonal Deep Cleaning",
+                    description: "Beyond monthly cleaning—thorough seasonal window care that keeps your property looking its best year-round.",
                   },
                 ].map((item) => (
                   <div key={item.title} className="p-6 rounded-2xl bg-white/5 border border-white/10">
@@ -460,7 +441,7 @@ export default function Memberships() {
               <div className="text-center mt-12">
                 <Button asChild size="xl" className="bg-white text-[#1d1d1f] hover:bg-white/90">
                   <Link to="/book">
-                    Experience Estate Care
+                    Start Summit Today
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
