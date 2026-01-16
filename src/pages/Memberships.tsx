@@ -229,38 +229,40 @@ export default function Memberships() {
                 : "Professional exterior prep packages designed for listing success."}
             </p>
             {customerType === "homeowner" && (
-              <div className="mb-8 inline-block bg-card border border-border rounded-xl overflow-hidden">
-                <table className="text-sm">
-                  <thead>
-                    <tr className="border-b border-border bg-secondary/50">
-                      <th className="px-6 py-3 text-left font-medium text-muted-foreground">Size</th>
-                      <th className="px-6 py-3 text-center font-medium">Base</th>
-                      <th className="px-6 py-3 text-center font-medium text-primary">Summit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-border/50">
-                      <td className="px-6 py-3">Up to 1,200 sq ft</td>
-                      <td className="px-6 py-3 text-center">$180</td>
-                      <td className="px-6 py-3 text-center text-primary">$300</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="px-6 py-3">Up to 2,400 sq ft</td>
-                      <td className="px-6 py-3 text-center">$280</td>
-                      <td className="px-6 py-3 text-center text-primary">$400</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="px-6 py-3">Up to 3,600 sq ft</td>
-                      <td className="px-6 py-3 text-center">$380</td>
-                      <td className="px-6 py-3 text-center text-primary">$500</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-3">Up to 5,000 sq ft</td>
-                      <td className="px-6 py-3 text-center">$480</td>
-                      <td className="px-6 py-3 text-center text-primary">$600</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="mb-8 flex justify-center">
+                <div className="bg-card border border-border rounded-xl overflow-hidden">
+                  <table className="text-sm">
+                    <thead>
+                      <tr className="border-b border-border bg-secondary/50">
+                        <th className="px-6 py-3 text-left font-medium text-muted-foreground">Size</th>
+                        <th className="px-6 py-3 text-center font-medium">Base</th>
+                        <th className="px-6 py-3 text-center font-medium text-primary">Summit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="px-6 py-3">Up to 1,200 sq ft</td>
+                        <td className="px-6 py-3 text-center">$180</td>
+                        <td className="px-6 py-3 text-center text-primary">$300</td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="px-6 py-3">Up to 2,400 sq ft</td>
+                        <td className="px-6 py-3 text-center">$280</td>
+                        <td className="px-6 py-3 text-center text-primary">$400</td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="px-6 py-3">Up to 3,600 sq ft</td>
+                        <td className="px-6 py-3 text-center">$380</td>
+                        <td className="px-6 py-3 text-center text-primary">$500</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-3">Up to 5,000 sq ft</td>
+                        <td className="px-6 py-3 text-center">$480</td>
+                        <td className="px-6 py-3 text-center text-primary">$600</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             )}
             {customerType === "agent" && <div className="mb-8" />}
