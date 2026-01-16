@@ -230,7 +230,7 @@ export default function Memberships() {
             </p>
             {customerType === "homeowner" && (
               <p className="text-sm text-muted-foreground mb-8">
-                Prices shown are for properties under 1,200 sq ft. <Link to="/contact" className="underline hover:text-foreground">Contact us</Link> for larger properties.
+                Prices shown are for properties up to 1,200 sq ft. Add $100/month for each additional 1,000 sq ft.
               </p>
             )}
             {customerType === "agent" && <div className="mb-8" />}
