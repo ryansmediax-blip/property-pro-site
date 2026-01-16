@@ -369,7 +369,7 @@ export default function Memberships() {
                   }`}
                   variant={plan.highlighted ? "default" : plan.popular ? "cta" : "outline"}
                 >
-                  <Link to="/book">
+                  <Link to={customerType === "homeowner" ? `/book?package=${plan.name.toLowerCase()}` : "/book"}>
                     {plan.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
