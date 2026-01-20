@@ -586,10 +586,46 @@ export default function Book() {
             {/* Step 2: Agent Package Review */}
             {step === 2 && customerType === "agent" && selectedAgentPackage && (
               <div className="animate-fade-in">
-                <h2 className="text-2xl font-semibold mb-2 text-center">Your {agentPackages[selectedAgentPackage].name} Package</h2>
-                <p className="text-muted-foreground text-center mb-8">
-                  Review your package details below.
-                </p>
+                {/* Hero Value Proposition */}
+                <div className="text-center mb-10 max-w-2xl mx-auto">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    Help Your Listings Sell Faster
+                  </h2>
+                  <p className="text-xl text-muted-foreground mb-6 italic">
+                    "You can photoshop a dirty couch, but you can't photoshop dirty windows."
+                  </p>
+                  <div className="bg-secondary/50 rounded-2xl p-6 text-left space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">First Impressions Matter</p>
+                        <p className="text-sm text-muted-foreground">Dirty windows show up in every listing photo. Clean windows make homes look brighter, newer, and more inviting to buyers.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Open Houses That Shine</p>
+                        <p className="text-sm text-muted-foreground">When buyers walk through, sparkling windows let natural light flood in—making every room feel larger and more welcoming.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Stand Out From Other Agents</p>
+                        <p className="text-sm text-muted-foreground">Offer sellers something competitors don't—a listing prep service that helps their home present perfectly from day one.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-4 text-center">Your {agentPackages[selectedAgentPackage].name} Package</h3>
                 
                 {/* Package Details */}
                 <Card className="mb-8 max-w-2xl mx-auto">
