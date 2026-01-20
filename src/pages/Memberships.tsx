@@ -12,9 +12,7 @@ const homeownerPlans = [
     icon: Zap,
     features: [
       "Monthly exterior window cleaning",
-      "Entry way snow removal",
       "Photo property reports",
-      "Priority scheduling",
       "Email service updates",
     ],
     cta: "Start Base",
@@ -27,10 +25,11 @@ const homeownerPlans = [
     popular: true,
     highlighted: true,
     features: [
-      "Everything in Base",
-      "Video property reports with walkthrough",
-      "Extended snow removal coverage",
+      "Monthly exterior window cleaning",
       "Seasonal deep window cleaning",
+      "Entry way snow removal",
+      "Photo & video property reports",
+      "Email service updates",
       "48hr response guarantee",
       "Monthly property check-ins",
     ],
@@ -103,10 +102,11 @@ const agentPackages = [
 
 const homeownerComparison = [
   { name: "Exterior window cleaning", base: "Monthly", summit: "Monthly + Seasonal Deep Clean" },
-  { name: "Entry way snow removal", base: "Standard", summit: "Extended Coverage" },
-  { name: "Property reports", base: "Photo", summit: "Photo & Video Walkthrough" },
-  { name: "Response time", base: "72hr", summit: "48hr Guarantee" },
-  { name: "Property check-ins", base: "Per visit", summit: "Monthly dedicated" },
+  { name: "Entry way snow removal", base: "—", summit: "Included" },
+  { name: "Property reports", base: "Photo", summit: "Photo & Video" },
+  { name: "Email service updates", base: "✓", summit: "✓" },
+  { name: "Response time", base: "Standard", summit: "48hr Guarantee" },
+  { name: "Property check-ins", base: "—", summit: "Monthly dedicated" },
 ];
 
 const agentComparison = [
