@@ -4,50 +4,31 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, Sparkles, Shield, Clock, Home, CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-cabin.jpg";
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "Pristine Exteriors",
-    description: "Crystal-clear windows, spotless siding, and gleaming surfaces that showcase your property's true beauty.",
-  },
-  {
-    icon: Shield,
-    title: "Licensed & Insured",
-    description: "Full coverage and professional liability insurance for your complete peace of mind.",
-  },
-  {
-    icon: Clock,
-    title: "Reliable Scheduling",
-    description: "Consistent service you can count on, whether you're home or away.",
-  },
-  {
-    icon: Home,
-    title: "Local Expertise",
-    description: "Deep understanding of Valley County's unique climate and property care needs.",
-  },
-];
-
-const services = [
-  "Window Cleaning",
-  "Pressure Washing",
-  "Gutter Cleaning",
-  "Snow Removal",
-  "Property Check-ins",
-];
-
+const features = [{
+  icon: Sparkles,
+  title: "Pristine Exteriors",
+  description: "Crystal-clear windows, spotless siding, and gleaming surfaces that showcase your property's true beauty."
+}, {
+  icon: Shield,
+  title: "Licensed & Insured",
+  description: "Full coverage and professional liability insurance for your complete peace of mind."
+}, {
+  icon: Clock,
+  title: "Reliable Scheduling",
+  description: "Consistent service you can count on, whether you're home or away."
+}, {
+  icon: Home,
+  title: "Local Expertise",
+  description: "Deep understanding of Valley County's unique climate and property care needs."
+}];
+const services = ["Window Cleaning", "Pressure Washing", "Gutter Cleaning", "Snow Removal", "Property Check-ins"];
 export default function Index() {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="Luxury mountain cabin in Idaho wilderness" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Luxury mountain cabin in Idaho wilderness" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         </div>
 
@@ -127,11 +108,7 @@ export default function Index() {
 
           {/* Feature grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
-            {features.map((feature, index) => (
-              <div 
-                key={feature.title} 
-                className="group relative p-8 md:p-6 rounded-3xl bg-[#2d2d2f]/50 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-all duration-500 hover:bg-[#2d2d2f]/80"
-              >
+            {features.map((feature, index) => <div key={feature.title} className="group relative p-8 md:p-6 rounded-3xl bg-[#2d2d2f]/50 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-all duration-500 hover:bg-[#2d2d2f]/80">
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2997ff]/20 to-[#5ac8fa]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                   <feature.icon className="h-7 w-7 text-[#2997ff]" />
@@ -146,8 +123,7 @@ export default function Index() {
                 <p className="text-[#86868b] text-base leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Bottom accent */}
@@ -172,12 +148,10 @@ export default function Index() {
                 property's exterior maintenance so you can enjoy your Idaho retreat worry-free.
               </p>
               <ul className="grid grid-cols-2 gap-4 mb-8">
-                {services.map((service) => (
-                  <li key={service} className="flex items-center gap-3">
+                {services.map(service => <li key={service} className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
                     <span className="text-foreground">{service}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               <Button asChild variant="default" size="lg">
                 <Link to="/services">
@@ -188,11 +162,7 @@ export default function Index() {
             </div>
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-card-hover">
-                <img 
-                  src={heroImage} 
-                  alt="Property exterior being serviced" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Property exterior being serviced" className="w-full h-full object-cover border" src="/lovable-uploads/86f4f8ef-2f0d-49bf-a706-42e11d88747f.jpg" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-card border border-border">
                 <p className="text-sm text-muted-foreground">Starting from</p>
@@ -247,31 +217,24 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                quote: "The best decision I made for my vacation home. I never have to worry about the property looking neglected when I arrive.",
-                author: "Sarah M.",
-                title: "McCall Homeowner",
-              },
-              {
-                quote: "Their listing prep service is incredible. My properties photograph beautifully and sell faster. True professionals.",
-                author: "Michael R.",
-                title: "Real Estate Agent",
-              },
-              {
-                quote: "Reliable, thorough, and reasonably priced. They understand the challenges of mountain property maintenance.",
-                author: "Jennifer & Tom K.",
-                title: "Donnelly Residents",
-              },
-            ].map((testimonial, index) => (
-              <Card key={index} className="hover-lift">
+            {[{
+            quote: "The best decision I made for my vacation home. I never have to worry about the property looking neglected when I arrive.",
+            author: "Sarah M.",
+            title: "McCall Homeowner"
+          }, {
+            quote: "Their listing prep service is incredible. My properties photograph beautifully and sell faster. True professionals.",
+            author: "Michael R.",
+            title: "Real Estate Agent"
+          }, {
+            quote: "Reliable, thorough, and reasonably priced. They understand the challenges of mountain property maintenance.",
+            author: "Jennifer & Tom K.",
+            title: "Donnelly Residents"
+          }].map((testimonial, index) => <Card key={index} className="hover-lift">
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-accent fill-current" viewBox="0 0 20 20">
+                    {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 text-accent fill-current" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
+                      </svg>)}
                   </div>
                   <p className="text-foreground mb-4 italic">"{testimonial.quote}"</p>
                   <div>
@@ -279,8 +242,7 @@ export default function Index() {
                     <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -307,6 +269,5 @@ export default function Index() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
