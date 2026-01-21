@@ -29,7 +29,7 @@ export default function Index() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img src={heroImage} alt="Luxury mountain cabin in Idaho wilderness" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20" />
         </div>
 
         <div className="relative z-10 container-wide mx-auto px-6 lg:px-8">
