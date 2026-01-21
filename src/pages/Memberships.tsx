@@ -226,38 +226,6 @@ export default function Memberships() {
       {/* Plans Section with Toggle */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container-wide mx-auto px-6 lg:px-8">
-          {/* Agent Sales Copy */}
-          {customerType === "agent" && (
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 italic">
-                "You can photoshop a dirty couch, but you can't photoshop dirty windows."
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 text-left">
-                <div className="bg-card border border-border rounded-2xl p-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Camera className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2">First Impressions Matter</h3>
-                  <p className="text-sm text-muted-foreground">Dirty windows show up in every listing photo. Clean windows make homes look brighter, newer, and more inviting to buyers.</p>
-                </div>
-                <div className="bg-card border border-border rounded-2xl p-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Star className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2">Open Houses That Shine</h3>
-                  <p className="text-sm text-muted-foreground">When buyers walk through, sparkling windows let natural light flood in—making every room feel larger and more welcoming.</p>
-                </div>
-                <div className="bg-card border border-border rounded-2xl p-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Handshake className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2">Stand Out From Other Agents</h3>
-                  <p className="text-sm text-muted-foreground">Offer sellers something competitors don't—a listing prep service that helps their home present perfectly from day one.</p>
-                </div>
-              </div>
-            </div>
-          )}
-
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">Choose Your Level of Care</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-2">
@@ -469,6 +437,38 @@ export default function Memberships() {
               </tbody>
             </table>
           </div>
+
+          {/* Agent Sales Copy */}
+          {customerType === "agent" && (
+            <div className="max-w-3xl mx-auto text-center mt-16">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 italic">
+                "You can photoshop a dirty couch, but you can't photoshop dirty windows."
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 text-left">
+                <div className="bg-card border border-border rounded-2xl p-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Camera className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">First Impressions Matter</h3>
+                  <p className="text-sm text-muted-foreground">Dirty windows show up in every listing photo. Clean windows make homes look brighter, newer, and more inviting to buyers.</p>
+                </div>
+                <div className="bg-card border border-border rounded-2xl p-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Star className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Open Houses That Shine</h3>
+                  <p className="text-sm text-muted-foreground">When buyers walk through, sparkling windows let natural light flood in—making every room feel larger and more welcoming.</p>
+                </div>
+                <div className="bg-card border border-border rounded-2xl p-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Handshake className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Stand Out From Other Agents</h3>
+                  <p className="text-sm text-muted-foreground">Offer sellers something competitors don't—a listing prep service that helps their home present perfectly from day one.</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
