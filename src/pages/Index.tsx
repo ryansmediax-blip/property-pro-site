@@ -87,20 +87,17 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Features Section - Apple Style */}
-      <section className="relative py-32 md:py-40 bg-[#1d1d1f] overflow-hidden">
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
-        
+      {/* Features Section */}
+      <section className="relative py-32 md:py-40 bg-primary overflow-hidden">
         <div className="relative container-wide mx-auto px-6 lg:px-8">
           {/* Section header */}
           <div className="text-center max-w-4xl mx-auto mb-20 md:mb-28">
-            <p className="text-[#86868b] text-lg md:text-xl font-medium mb-4 tracking-wide">
+            <p className="text-primary-foreground/70 text-lg md:text-xl font-medium mb-4 tracking-wide">
               Why Property Owners Trust Us
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-foreground leading-tight tracking-tight">
               Built for the mountain lifestyle.{" "}
-              <span className="bg-gradient-to-r from-[#2997ff] to-[#5ac8fa] bg-clip-text text-transparent">
+              <span className="text-primary-foreground">
                 Designed for excellence.
               </span>
             </h2>
@@ -108,19 +105,19 @@ export default function Index() {
 
           {/* Feature grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
-            {features.map((feature, index) => <div key={feature.title} className="group relative p-8 md:p-6 rounded-3xl bg-[#2d2d2f]/50 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-all duration-500 hover:bg-[#2d2d2f]/80">
+            {features.map((feature, index) => <div key={feature.title} className="group relative p-8 md:p-6 rounded-3xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:border-primary-foreground/20 transition-all duration-500 hover:bg-primary-foreground/10">
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2997ff]/20 to-[#5ac8fa]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <feature.icon className="h-7 w-7 text-[#2997ff]" />
+                <div className="w-14 h-14 rounded-2xl bg-primary-foreground/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <feature.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-white mb-3 tracking-tight">
+                <h3 className="text-xl font-semibold text-primary-foreground mb-3 tracking-tight">
                   {feature.title}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-[#86868b] text-base leading-relaxed">
+                <p className="text-primary-foreground/70 text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>)}
@@ -128,8 +125,8 @@ export default function Index() {
 
           {/* Bottom accent */}
           <div className="mt-20 md:mt-28 text-center">
-            <p className="text-[#86868b] text-lg">
-              Trusted by <span className="text-white font-medium">100+ property owners</span> across Valley County
+            <p className="text-primary-foreground/70 text-lg">
+              Trusted by <span className="text-primary-foreground font-medium">100+ property owners</span> across Valley County
             </p>
           </div>
         </div>
