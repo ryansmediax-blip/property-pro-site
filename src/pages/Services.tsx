@@ -91,18 +91,18 @@ export default function Services() {
       </section>
 
       {/* Membership Push */}
-      <section className="py-20 bg-[#1d1d1f]">
+      <section className="py-20 bg-primary">
         <div className="container-wide mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[#2997ff] font-medium mb-4">The Smarter Choice</p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">
+            <p className="text-primary-foreground/70 font-medium mb-4">The Smarter Choice</p>
+            <h2 className="text-3xl md:text-4xl font-semibold text-primary-foreground mb-6">
               Why Book Once When You Can{" "}
-              <span className="bg-gradient-to-r from-[#2997ff] to-[#5ac8fa] bg-clip-text text-transparent">
+              <span className="text-primary-foreground">
                 Save 20-30%
               </span>{" "}
               With a Membership?
             </h2>
-            <p className="text-[#86868b] text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">
               Members get priority scheduling, automatic service, and significant savings 
               compared to booking individual services.
             </p>
@@ -113,14 +113,14 @@ export default function Services() {
                 "Priority booking",
                 "Cancel anytime",
               ].map((benefit) => (
-                <div key={benefit} className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-[#2997ff]" />
+                <div key={benefit} className="flex items-center justify-center gap-2 text-primary-foreground">
+                  <Check className="h-5 w-5 text-primary-foreground" />
                   <span className="text-sm">{benefit}</span>
                 </div>
               ))}
             </div>
 
-            <Button asChild size="xl" className="bg-white text-[#1d1d1f] hover:bg-white/90">
+            <Button asChild size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <Link to="/memberships">
                 View Membership Plans
                 <ArrowRight className="ml-2 h-5 w-5" />
