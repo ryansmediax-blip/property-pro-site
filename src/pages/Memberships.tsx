@@ -128,16 +128,14 @@ export default function Memberships() {
 
   return (
     <Layout>
-      {/* Hero - Apple Style */}
-      <section className="relative py-24 md:py-32 bg-[#1d1d1f] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
-        
+      {/* Hero */}
+      <section className="relative py-24 md:py-32 bg-primary overflow-hidden">
         <div className="relative container-wide mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-sm font-medium px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 bg-primary-foreground/10 text-primary-foreground/80 text-sm font-medium px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
               {customerType === "homeowner" ? (
                 <>
-                  <Heart className="h-4 w-4 text-[#ff6b6b]" />
+                  <Heart className="h-4 w-4 text-primary-foreground" />
                   <span>Set It & Forget It</span>
                 </>
               ) : (
@@ -148,30 +146,30 @@ export default function Memberships() {
               )}
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground leading-[1.1] tracking-tight mb-6">
               {customerType === "homeowner" ? (
                 <>
                   Property care.{" "}
-                  <span className="bg-gradient-to-r from-[#2997ff] to-[#5ac8fa] bg-clip-text text-transparent">
+                  <span className="text-primary-foreground">
                     Simplified.
                   </span>
                 </>
               ) : (
                 <>
                   Listings that{" "}
-                  <span className="bg-gradient-to-r from-[#2997ff] to-[#5ac8fa] bg-clip-text text-transparent">
+                  <span className="text-primary-foreground">
                     photograph beautifully.
                   </span>
                 </>
               )}
             </h1>
             
-            <p className="text-xl md:text-2xl text-[#86868b] max-w-2xl mx-auto mb-4">
+            <p className="text-xl md:text-2xl text-primary-foreground/70 max-w-2xl mx-auto mb-4">
               {customerType === "homeowner" 
                 ? "Stop worrying. Start enjoying." 
                 : "Fast, reliable exterior prep that makes your properties shine."}
             </p>
-            <p className="text-lg text-[#86868b] max-w-xl mx-auto">
+            <p className="text-lg text-primary-foreground/70 max-w-xl mx-auto">
               {customerType === "homeowner"
                 ? "Monthly memberships that keep your property pristine year-round, so you can focus on what matters most."
                 : "Get your listings photo-ready with our professional exterior prep packages."}
@@ -181,7 +179,7 @@ export default function Memberships() {
       </section>
 
       {/* Value Props */}
-      <section className="py-16 bg-[#1d1d1f] border-t border-white/5">
+      <section className="py-16 bg-primary border-t border-primary-foreground/5">
         <div className="container-wide mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             {customerType === "homeowner" ? (
@@ -193,11 +191,11 @@ export default function Memberships() {
                   { icon: Zap, title: "Set & Forget", desc: "Automatic scheduling" },
                 ].map((item) => (
                   <div key={item.title} className="text-center">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="h-6 w-6 text-[#2997ff]" />
+                    <div className="w-12 h-12 rounded-2xl bg-primary-foreground/5 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                    <p className="text-[#86868b] text-sm">{item.desc}</p>
+                    <h3 className="text-primary-foreground font-semibold mb-1">{item.title}</h3>
+                    <p className="text-primary-foreground/70 text-sm">{item.desc}</p>
                   </div>
                 ))}
               </>
@@ -210,11 +208,11 @@ export default function Memberships() {
                   { icon: Star, title: "15% Partner Discount", desc: "Volume pricing" },
                 ].map((item) => (
                   <div key={item.title} className="text-center">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="h-6 w-6 text-[#2997ff]" />
+                    <div className="w-12 h-12 rounded-2xl bg-primary-foreground/5 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                    <p className="text-[#86868b] text-sm">{item.desc}</p>
+                    <h3 className="text-primary-foreground font-semibold mb-1">{item.title}</h3>
+                    <p className="text-primary-foreground/70 text-sm">{item.desc}</p>
                   </div>
                 ))}
               </>
@@ -474,15 +472,15 @@ export default function Memberships() {
 
       {/* Persuasive Section - Conditional */}
       {customerType === "homeowner" ? (
-        <section className="py-24 md:py-32 bg-[#1d1d1f]">
+        <section className="py-24 md:py-32 bg-primary">
           <div className="container-wide mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <Star className="h-12 w-12 text-[#ffd700] mx-auto mb-6" />
-                <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+                <Star className="h-12 w-12 text-primary-foreground mx-auto mb-6" />
+                <h2 className="text-4xl md:text-5xl font-semibold text-primary-foreground mb-6">
                   Why Summit is Worth It
                 </h2>
-                <p className="text-[#86868b] text-xl max-w-2xl mx-auto">
+                <p className="text-primary-foreground/70 text-xl max-w-2xl mx-auto">
                   Complete peace of mind for just $120 more per year.
                 </p>
               </div>
@@ -506,15 +504,15 @@ export default function Memberships() {
                     description: "Beyond monthly cleaning—thorough seasonal window care that keeps your property looking its best year-round.",
                   },
                 ].map((item) => (
-                  <div key={item.title} className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-[#86868b] text-sm leading-relaxed">{item.description}</p>
+                  <div key={item.title} className="p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10">
+                    <h3 className="text-lg font-semibold text-primary-foreground mb-2">{item.title}</h3>
+                    <p className="text-primary-foreground/70 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
 
               <div className="text-center mt-12">
-                <Button asChild size="xl" className="bg-white text-[#1d1d1f] hover:bg-white/90">
+                <Button asChild size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                   <Link to="/book">
                     Start Summit Today
                     <ArrowRight className="ml-2 h-5 w-5" />
